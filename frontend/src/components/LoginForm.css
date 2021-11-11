@@ -1,0 +1,38 @@
+.form-inner{
+	height: 700px;
+	margin: 0; 
+	display: flex; justify-content: center;
+	align-items: center;
+}
+
+.form{
+	width: 350px; height: 400px;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	display: flex; 
+	border: 1px solid lightgrey;
+}
+
+.form-group{
+	align-items: center;
+}
+
+
+#email, #password{
+	width: 250px; height: 35px;
+	margin: 3px;
+	background-color: #f2f2f2;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+}
+
+#btn{
+	width: 260px; height: 30px;
+	padding: 5px;
+	margin: 10px 0;
+	background-color: #B2DFFC;
+	color: white;
+	border: none;
+	border-radius: 5px;
+}
