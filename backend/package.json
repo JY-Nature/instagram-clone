@@ -1,18 +1,15 @@
 {
-  "name": "instagram-clone-backend",
-  "version": "0.1.0",
-  "description": "A clone of the Instagram website",
-  "main": "server.js",
+  "name": "kstagram",
+  "version": "1.0.0",
+  "description": "instagram clone coding",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lstar2397/instagram-clone.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
   },
   "author": "Sanizzang",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
@@ -25,8 +22,7 @@
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3-rc.0"
   },
-  "bugs": {
-    "url": "https://github.com/lstar2397/instagram-clone/issues"
-  },
-  "homepage": "https://github.com/lstar2397/instagram-clone#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
 }
