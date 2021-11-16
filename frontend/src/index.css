@@ -20,3 +20,17 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   font: inherit;
   vertical-align: baseline;
 }
+
+div, main, nav, section, article {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
