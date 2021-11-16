@@ -8,7 +8,9 @@ class MainPage extends Component {
 
     return (
       <LayoutWithNavbar active="home">
-        메인 페이지
+        <div>
+          <h1>메인 페이지</h1>
+        </div>
       </LayoutWithNavbar>
     );
   }
