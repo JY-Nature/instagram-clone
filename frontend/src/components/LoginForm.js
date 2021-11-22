@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import useForm from './LoginUseForm';
 import validate from './LoginValidate'
 import './LoginForm.css';
 
 
-
 const LoginForm = () => {
+  const history = useHistory();
 
   const adminUser = {
     email: "test@test.com",
@@ -16,12 +16,13 @@ const LoginForm = () => {
   const [error, setError] = useState("");
 
   const login = () => {
+    console.log('hh');
     if(adminUser.email !== user.email && adminUser.password !== user.password){
       setError("잘못된 비밀번호입니다. 다시 확인하세요.");
     } else if(adminUser.email !== user.email || adminUser.password !== user.password){
       setError("잘못된 비밀번호입니다. 다시 확인하세요.");
     } else {
-      <Link to="/" />
+      history.replace("/");
     }
   }
 

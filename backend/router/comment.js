@@ -7,11 +7,16 @@ import { validate } from '../middleware/validator.js';
 
 const router = express.Router();
 
+const validateComment = [
+    body('content').isLength({max:30}).withMessage('You have to write comments in less than 30 characters'), 
+    validate,
+];
+
 // GET /comment/:feedId
 router.get('/:feedId', commentController.getComment);
 
 // POST /commnet/:feedId
-router.post('/:feedId', commentController.createComment);
+router.post('/:feedId', isAuth, validateComment, commentController.createComment);
 
 // DELETE /comment/:feedId
 router.delete('/:feedId', commentController.removeComment);
