@@ -21,3 +21,19 @@ export async function createUser(user){
         )
         .then((result) => result[0].insertId);
 }
+
+export async function revisePassword(userId, hashed){
+    return db.execute(
+        'UPDATE user SET password=? WHERE id=?', [newpassword, userId]
+    )
+    .then(result => result[0].insertId);
+}
+
+export async function reviseProfile(userId, value){
+    const { name, username, website_url, biography, email, phoneNumber, gender } = value;
+    db
+    .execute('UPDATE user SET name=?, username=?, biography=?, email=?, phoneNumber=?, gender=? WHERE id=?',
+             [name, username, website_url, biography, email, phoneNumber, gender, userId]
+    )
+    .then(result);
+}

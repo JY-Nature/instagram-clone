@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import {useState} from 'react'
 import { useHistory } from 'react-router'
 import axios from 'axios'
+=======
+import { useState } from 'react'
+>>>>>>> d0e496291e4521cbd1183917293b963f801d5553
 
 const useForm = (validate) => {
 	const [info, setInfo] = useState({

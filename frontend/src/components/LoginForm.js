@@ -1,20 +1,41 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom"
+=======
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom"
+>>>>>>> d0e496291e4521cbd1183917293b963f801d5553
 import useForm from './LoginUseForm';
 import validate from './LoginValidate'
 import img from '../assets/images/logo2x.png'
 import './LoginForm.css';
 
 
-
 const LoginForm = () => {
+<<<<<<< HEAD
   // const adminUser = {
   //   email: "test@test.com",
   //   password: "test123"
   // }
+=======
+  const history = useHistory();
+>>>>>>> d0e496291e4521cbd1183917293b963f801d5553
 
   // const [error, setError] = useState("");
 
+<<<<<<< HEAD
+=======
+  const login = () => {
+    console.log('hh');
+    if(adminUser.email !== user.email && adminUser.password !== user.password){
+      setError("잘못된 비밀번호입니다. 다시 확인하세요.");
+    } else if(adminUser.email !== user.email || adminUser.password !== user.password){
+      setError("잘못된 비밀번호입니다. 다시 확인하세요.");
+    } else {
+      history.replace("/");
+    }
+  }
+>>>>>>> d0e496291e4521cbd1183917293b963f801d5553
 
   const { handleChange, user, handleSubmit, errors, handleClick} = useForm(validate)
   // const btnChange = () => {
