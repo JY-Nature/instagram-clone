@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MainPage, LoginPage, SignUpPage, InboxPage, ExplorePage, ProfilePage } from './pages';
 import './index.css';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

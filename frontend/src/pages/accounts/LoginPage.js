@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import Axios from 'axios';
 // import { response } from 'express';
 import { Layout, LoginForm } from '../../components';
@@ -6,6 +6,7 @@ import { Layout, LoginForm } from '../../components';
 
 const LoginPage = (props) => {
 
+  
 
   // 로그아웃 -> email 초기화
   // const Logout = () => {
@@ -19,7 +20,7 @@ const LoginPage = (props) => {
   return (
     <Layout>
       <div>
-        <LoginForm />
+        <LoginForm  />
       </div>
     </Layout>
   );

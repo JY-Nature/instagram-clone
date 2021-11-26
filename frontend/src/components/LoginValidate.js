@@ -9,7 +9,7 @@ export default function validateInfo( user ){
 
 	if(!user.password){
 		errors.password = "password required"
-	}
+	} 
 
 	return errors;
 }

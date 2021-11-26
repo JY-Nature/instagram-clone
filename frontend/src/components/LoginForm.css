@@ -18,9 +18,17 @@
 	border: 1px solid lightgrey;
 } */
 
+.logo {
+	position: relative;
+	bottom: 50px;
+	left: 40px;
+	width: 175px;
+	height: 51px;
+
+}
 
 .form{
-	width: 350px; height: 400px;
+	width: 350px; height: 382px;
 	background-color: white;
 	border: 1px solid lightgrey;
 }
@@ -59,6 +67,12 @@
 	border: none;
 	border-radius: 5px;
 	
+}
+.changeBtn {
+	background-color: #0095f6;
+}
+.disable {
+	background-color: #B2DFFC;
 }
 
 #signup{

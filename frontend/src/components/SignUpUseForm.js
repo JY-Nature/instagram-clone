@@ -1,11 +1,13 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
+import { useHistory } from 'react-router'
+import axios from 'axios'
 
 const useForm = (validate) => {
 	const [info, setInfo] = useState({
-		useremail: "",
-		userName: "",
-		usernick: "",
-		userpassword: ""
+		email: "",
+		username: "",
+		name: "",
+		password: ""
 	})
 
 	const [errors, setErrors] = useState({})
@@ -17,14 +19,42 @@ const useForm = (validate) => {
 			  [name]:value
 		  })
 	  };
-
-	const handleSubmit = e => {
+	  const handleSubmit = e => {
 		e.preventDefault()
+	  }
+	  const history = useHistory();
+	  const handleClick = () => {
 
-		setErrors(validate(info))
-	}
+		const data = {
+			email: info.email,
+			password: info.password,
+			username: info.username,
+			name: info.name
+		  };
 
-	  return { handleChange, info, handleSubmit, errors }
-}
+		  console.log(data)
+		  
+			axios.post('https://reqres.in/api/register', data)
+			.then(
+				res => { 
+					console.log(res) 
+					
+					history.push("/")
+				}
+			).catch(
+				err => { 
+					console.log(err) 
+				}
+			)
+			
+			
+			setErrors(validate(info))
+		}
+
+		return { handleChange, info, handleSubmit ,errors, handleClick }
+		}
+
+
+
 
 export default useForm;

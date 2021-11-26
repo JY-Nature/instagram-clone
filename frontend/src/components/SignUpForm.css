@@ -12,14 +12,24 @@
 	align-items: center;
 	justify-content: center;
 }
-/* .photo{
-	width: 350px; height: 400px;
-	float: left;
-	border: 1px solid lightgrey;
-} */
+.logo {
+	position: relative;
+	bottom: 50px;
+	left: 40px;
+	width: 175px;
+	height: 51px;
+
+}
+.text {
+	color: #616060;
+	text-align: center;
+	position: relative;
+	bottom: 20px;
+	right: 20px;
+}
 
 
-.form{
+.signform{
 	width: 350px; height: 490px;
 	background-color: white;
 	border: 1px solid lightgrey;
@@ -42,7 +52,7 @@
 	
 }
 
-#useremail, #userpassword, #usernick, #userName{
+#mail, #password, #name, #username{
 	width: 250px; height: 35px;
 	margin: 3px;
 	background-color: #f2f2f2;
